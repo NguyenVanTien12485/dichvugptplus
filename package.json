@@ -1,0 +1,26 @@
+{
+    "name": "dichvugptplus",
+    "version": "1.0.0",
+    "description": "Dịch vụ nâng cấp ChatGPT Plus",
+    "main": "index.html",
+    "scripts": {
+        "start": "http-server -p 3000 -c-1",
+        "build": "npm run clean && npm run copy-assets && npm run minify",
+        "clean": "rimraf dist",
+        "copy-assets": "mkdir dist && copyfiles -u 0 \"*.{ico,webp,jpg,jpeg,png,svg,json}\" dist",
+        "minify": "html-minifier-terser --input-dir ./ --output-dir ./dist --file-ext html --collapse-whitespace --remove-comments --minify-css true --minify-js true"
+    },
+    "keywords": [
+        "chatgpt",
+        "plus",
+        "service"
+    ],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "copyfiles": "^2.4.1",
+        "html-minifier-terser": "^7.2.0",
+        "http-server": "^14.1.1",
+        "rimraf": "^5.0.5"
+    }
+}
