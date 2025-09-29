@@ -23,23 +23,27 @@ npm run build
 ## Deployment
 
 ### Standard Hosting
+
 After running `npm run build`, the optimized files will be available in the `dist/` directory.
 Upload these files to your hosting service.
 
 ### Vercel Deployment
+
 This project is configured for easy deployment with Vercel:
 
 1. Install Vercel CLI (optional):
-   ```bash
-   npm install -g vercel
-   ```
+
+    ```bash
+    npm install -g vercel
+    ```
 
 2. Deploy to Vercel:
-   ```bash
-   vercel
-   ```
+    ```bash
+    vercel
+    ```
 
 Alternatively, you can connect your GitHub repository to Vercel for automatic deployments:
+
 1. Push your code to GitHub
 2. Go to https://vercel.com and sign in
 3. Click "Import Project" and select your GitHub repository
