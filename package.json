@@ -4,11 +4,13 @@
     "description": "Dịch vụ nâng cấp ChatGPT Plus",
     "main": "index.html",
     "scripts": {
+        "dev": "http-server -p 3000 -c-1",
         "start": "http-server -p 3000 -c-1",
         "build": "npm run clean && npm run copy-assets && npm run minify",
         "clean": "rimraf dist",
         "copy-assets": "mkdir dist && copyfiles -u 0 \"*.{ico,webp,jpg,jpeg,png,svg,json}\" dist",
-        "minify": "html-minifier-terser --input-dir ./ --output-dir ./dist --file-ext html --collapse-whitespace --remove-comments --minify-css true --minify-js true"
+        "minify": "html-minifier-terser --input-dir ./ --output-dir ./dist --file-ext html --collapse-whitespace --remove-comments --minify-css true --minify-js true",
+        "vercel-build": "npm run build"
     },
     "keywords": [
         "chatgpt",

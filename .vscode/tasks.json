@@ -24,6 +24,26 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "Deploy to Vercel",
+            "type": "shell",
+            "command": "vercel",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Deploy to Vercel (Production)",
+            "type": "shell",
+            "command": "vercel --prod",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
         }
     ]
 }
